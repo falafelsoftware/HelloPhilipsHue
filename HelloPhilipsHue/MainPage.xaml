@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="HelloPhilipsHue.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloPhilipsHue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:color="using:ColorPicker"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical" Margin="10,20,10,20">
+            <TextBlock FontSize="25" Foreground="Blue">Philips Hue Lightbulb Control Center v.0.0.1</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <ToggleSwitch x:Name="toggle_Power" Toggled="Toggle_Power_Toggled" >Light 1 Power Control</ToggleSwitch>
+                <StackPanel Orientation="Vertical" Margin="15,0,0,0">
+                    <TextBlock>Light 1 Brightness</TextBlock>
+                    <Slider x:Name="slider_Brightness" Minimum="0" Maximum="255" Width="500" HorizontalAlignment="Left" ValueChanged="Slider_Brightness_ValueChanged" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock>Light 1 Color</TextBlock>
+            <color:ColorPicker x:Name="color_Picker" Width="500" Height="300" HorizontalAlignment="Left" BorderBrush="Black" SelectedColorChanged="Color_Picker_SelectedColorChanged"></color:ColorPicker>
+        </StackPanel>
+
+    </Grid>
+</Page>
